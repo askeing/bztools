@@ -30,6 +30,33 @@ class RemoteObject(RemoteObject_):
 
     _location = property(_get_location, _set_location)
 
+
+class Login(RemoteObject):
+
+    id = fields.Field()
+    token = fields.Field()
+
+    def __repr__(self):
+        return '<Login %s: "%s">' % (self.id, self.token)
+
+    def __str__(self):
+        return self.token
+
+    def __hash__(self):
+        return self.token
+
+
+class Logout(RemoteObject):
+
+    result = fields.Field()
+
+    def __repr__(self):
+        return '<Logout: %s>' % self.result
+
+    def __str__(self):
+        return 'Logout: %s' % self.result
+
+
 class Bug(RemoteObject):
 
     id = fields.Field()

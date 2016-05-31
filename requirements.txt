@@ -1,6 +1,8 @@
--e git://github.com/LegNeato/remoteobjects.git#egg=remoteobjects
+-e git://github.com/askeing/remoteobjects.git#egg=remoteobjects
 argparse
 python-dateutil
 keyring
 
 -e git://github.com/jbalogh/check.git#egg=check
+
+requests
